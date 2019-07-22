@@ -21,6 +21,17 @@ public class Plataforma {
         this.aportantes = new ArrayList<>();
         this.subastas = new ArrayList<>();
     }
+
+    public ArrayList<Promotor> getPromotores() {
+        return promotores;
+    }
+    public ArrayList<Aportante> getAportantes() {
+        return aportantes;
+    }
+    public ArrayList<Subasta> getSubastas() {
+        return subastas;
+    }
+    
     
     public void registrarPromotor(String usuario,String contraseña){
         boolean yaExiste=false;
@@ -68,6 +79,7 @@ public class Plataforma {
         if(promotor.getUsuario()==usuario){
             solicitor=promotor;
         proyecto=new Proyecto(nombre,descripcion,precioMax,precioMin);
+        proyecto.setUsuario(usuario);
         promotor.getProyectos().add(proyecto);        
             }
         this.subastas.add(new Subasta (solicitor, proyecto.getPrecioMax(), proyecto));

@@ -96,7 +96,7 @@ public class Controlador4 extends Controlador{
         if(sigVista==0){
         controlador=new Controlador5(modelo,usuarioS,contraseña);
         }else{
-        controlador=new Controlador6(modelo);
+        controlador=new Controlador6(modelo,usuarioS);
         }
         }else{
         modelo.registrarAportante(usuarioS,contraseña);
@@ -128,7 +128,7 @@ public class Controlador4 extends Controlador{
         if(sigVista==0){   
         controlador=new Controlador5(modelo,usuarioS,contraseña);
         }else{
-        controlador=new Controlador6(modelo);
+        controlador=new Controlador6(modelo,usuarioS);
         }
         }else{
         noExiste=modelo.loginAportante(usuarioS,contraseña);

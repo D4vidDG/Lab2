@@ -23,6 +23,8 @@ public class Proyecto {
         this.descripcion = descripcion;
         this.precioMin = precioMin;
         this.precioMax = precioMax;
+        this.precioOfertado=0;
+        this.aportanteGanador=null;
     }
 
     
